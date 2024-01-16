@@ -66,13 +66,13 @@ public class Proveedores {
 
     @Override
     public String toString() {
-        return "Proveedores{" +
-                "id=" + id +
-                ", cif='" + cif + '\'' +
-                ", nombre='" + nombre + '\'' +
-                ", direccion='" + direccion + '\'' +
-                ", localidad='" + localidad + '\'' +
-                ", provincia='" + provincia + '\'' +
+        return "Proveedores{" +"\n"+
+                "id=" + id +"\n"+
+                ", cif='" + cif + '\'' +"\n"+
+                ", nombre='" + nombre + '\'' +"\n"+
+                ", direccion='" + direccion + '\'' +"\n"+
+                ", localidad='" + localidad + '\'' +"\n"+
+                ", provincia='" + provincia + '\'' +"\n"+
                 '}';
     }
 }
