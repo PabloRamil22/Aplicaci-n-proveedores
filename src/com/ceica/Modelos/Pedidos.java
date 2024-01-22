@@ -56,4 +56,15 @@ public class Pedidos {
     public void setCantidad(int cantidad) {
         this.cantidad = cantidad;
     }
+
+    @Override
+    public String toString() {
+        return "Pedidos{" +
+                "id=" + id +
+                ", proveedor=" + proveedor +
+                ", pieza=" + pieza +
+                ", fechaPedido=" + fechaPedido +
+                ", cantidad=" + cantidad +
+                '}';
+    }
 }
