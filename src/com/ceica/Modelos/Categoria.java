@@ -1,5 +1,11 @@
 package com.ceica.Modelos;
 
+import com.ceica.bbdd.Conexion;
+
+import java.sql.*;
+import java.util.ArrayList;
+import java.util.List;
+
 public class Categoria {
     private int id;
     private String nombre;
@@ -7,6 +13,9 @@ public class Categoria {
     public Categoria(int id, String nombre) {
         this.id = id;
         this.nombre = nombre;
+    }
+
+    public Categoria() {
     }
 
     public int getId() {
@@ -24,6 +33,7 @@ public class Categoria {
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
+
 
     @Override
     public String toString() {

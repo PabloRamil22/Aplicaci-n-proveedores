@@ -18,9 +18,9 @@ public class AlmacenControl {
         piezasLista = new ArrayList<>();
         pedidosLista = new ArrayList<>();
         categorias= new ArrayList<>();
-        categorias.add(new Categoria(1, "pequeño"));
-        categorias.add(new Categoria(2, "mediano"));
-        categorias.add(new Categoria(3, "grande"));
+        proveedorLista=Proveedores.getProveedores();
+        categorias=Categoria.getCategoria();
+        piezasLista=Piezas.getPiezas();
 
     }
 

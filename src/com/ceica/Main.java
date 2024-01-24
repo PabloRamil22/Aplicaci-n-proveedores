@@ -21,18 +21,15 @@ public class Main {
         do {
             System.out.println("Login AppAlmacen");
             System.out.print("Introduce usuario: ");
-            usuario = leer.next();
+            usuario = leer.nextLine();
             System.out.print("Introduce la contraseña: ");
-            contraseña = leer.next();
+            contraseña = leer.nextLine();
             if (LoginControlle.login(usuario, contraseña)) {
                 System.out.println("Estoy en la AppAlmacen");
-                leer.nextLine();
+                menuPrincipalAlmacen(leer, almacen);
             } else {
                 System.out.println("Usuario o contraseña incorrecta");
             }
-            menuPrincipalAlmacen(leer, almacen);
-
-            break;
         } while (true);
 
     }
@@ -71,6 +68,7 @@ public class Main {
 
     private static void subMenuPiezas(Scanner leer, AlmacenControl almacen) {
         String id, nombre, color;
+        int idPieza = 0;
         Double precio;
         Categoria categoria;
         String op;
@@ -90,9 +88,14 @@ public class Main {
                     break;
                 case "2":
                     break;
-                case "3":
-                    //System.out.println(almacen.eliminarPieza(nombre));
+                /*case "3":
+                    System.out.println("Introduce ID de la pieza: ");
+                    id= leer.nextLine();
+                    System.out.println("La pieza que quieres eliminar es: "+almacen.getPedidosByPieza(idPieza));
+                    System.out.println(almacen.eliminarPieza());
                     break;
+
+                 */
                 case "4":
                     System.out.println(almacen.verPiezas());
                     break;

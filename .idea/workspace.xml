@@ -9,15 +9,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e286bc48-3b45-41e3-8255-cb4c8c26da6a" name="Changes" comment="Interfaz de usuario.">
-      <change afterPath="$PROJECT_DIR$/src/com/ceica/Controladores/LoginControlle.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/ceica/Modelos/Color.java" afterDir="false" />
+    <list default="true" id="e286bc48-3b45-41e3-8255-cb4c8c26da6a" name="Changes" comment="Interfaz de usuario nuevos añadidos.">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/mysql_connector_j.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/config.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/ceica/Modelos/Usuario.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/ceica/bbdd/Conexion.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Aplicaion proveedores Buena.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Aplicaion proveedores Buena.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/ceica/Controladores/AlmacenControl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/ceica/Controladores/AlmacenControl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/ceica/Controladores/LoginControlle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/ceica/Controladores/LoginControlle.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/ceica/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/ceica/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/ceica/Modelos/Categoria.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/ceica/Modelos/Categoria.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/ceica/Modelos/Pedidos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/ceica/Modelos/Pedidos.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/ceica/Modelos/Piezas.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/ceica/Modelos/Piezas.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/ceica/Modelos/Proveedores.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/ceica/Modelos/Proveedores.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,6 +39,20 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;PabloRamil22&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="b5fc76ec-7e95-494e-93df-6f95b579debb" />
+        <option name="url" value="https://github.com/PabloRamil22/Aplicaci-n-proveedores.git" />
+      </UrlAndAccount>
+    </option>
+  </component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
   </component>
@@ -47,19 +65,39 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Artifacts&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;vcs.Git&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Main.executor": "Run",
+    "Application.proveedores.executor": "Run",
+    "Downloaded.Files.Path.Enabled": "false",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "master",
+    "kotlin-language-version-configured": "true",
+    "project.structure.last.edited": "Libraries",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "vcs.Git"
   }
-}</component>
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Alumno Tarde\IdeaProjects\Aplicaion proveedores Buena" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="proveedores" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="com.ceica.Main" />
+      <module name="Aplicaion proveedores Buena" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -116,7 +154,23 @@
       <option name="project" value="LOCAL" />
       <updated>1705423120075</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Interfaz de usuario.">
+      <option name="closed" value="true" />
+      <created>1705950105831</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1705950105831</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Interfaz de usuario nuevos añadidos.">
+      <option name="closed" value="true" />
+      <created>1705950328898</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1705950328898</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -124,6 +178,7 @@
     <MESSAGE value="Creamos paquete com.ceica y modelo Proveedores." />
     <MESSAGE value="Hemos creado modelos de Piezas, Categorias y Pedidos." />
     <MESSAGE value="Interfaz de usuario." />
-    <option name="LAST_COMMIT_MESSAGE" value="Interfaz de usuario." />
+    <MESSAGE value="Interfaz de usuario nuevos añadidos." />
+    <option name="LAST_COMMIT_MESSAGE" value="Interfaz de usuario nuevos añadidos." />
   </component>
 </project>

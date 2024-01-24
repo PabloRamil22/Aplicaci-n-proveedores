@@ -1,5 +1,11 @@
 package com.ceica.Modelos;
 
+import com.ceica.bbdd.Conexion;
+
+import java.sql.*;
+import java.util.ArrayList;
+import java.util.List;
+
 public class Piezas {
     private static int idPieza=0;
     private int id;
@@ -14,6 +20,44 @@ public class Piezas {
         this.color = color;
         this.precio = precio;
         this.categoria= categoria;
+    }
+
+    public Piezas() {
+
+    }
+    public static boolean insertar(Piezas piezas) {
+        Connection conn=Conexion.conectar();
+        String sql="insert into piezas (nombre)" + " values (?)";
+        try {
+            PreparedStatement pst=conn.prepareStatement(sql);
+            pst.setString(1, piezas.getNombre());
+            if(pst.executeUpdate()<0){
+                return false;
+            }else{
+                return true;
+            }
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+    }
+    public static boolean eliminarPiezas(int idPieza) {
+        Connection conn=Conexion.conectar();
+        String sql="delete from piezas where idpiezas=?";
+        try {
+            PreparedStatement pst=conn.prepareStatement(sql);
+            pst.setString(1, String.valueOf(idPieza));
+            if(pst.executeUpdate()>0){
+                conn.close();
+                return true;
+            }else{
+                conn.close();
+                return false;
+            }
+        } catch (SQLException e) {
+            //throw new RuntimeException(e);
+            return false;
+        }
+
     }
 
     public int getId() {
@@ -54,6 +98,33 @@ public class Piezas {
 
     public void setCategoria(Categoria categoria) {
         this.categoria = categoria;
+    }
+
+    public static List<Piezas> getPiezas(){
+        List<Piezas> piezasLista=new ArrayList<>();
+        Connection conn= Conexion.conectar();
+        String sql="SELECT P.idpiezas,P.nombre,P.color,P.precio,C.idcategoria,C.nombre as nombre_categoria " +
+                "FROM proveedores.piezas as P inner join categoria as C on P.categoria=C.idcategoria;";
+        try {
+            Statement stm=conn.createStatement();
+            ResultSet respuesta=stm.executeQuery(sql);
+            while(respuesta.next()){
+                Categoria categoria=new Categoria();
+                Piezas piezas=new Piezas();
+                piezas.setId(respuesta.getInt("idpiezas"));
+                categoria.setId(respuesta.getInt("idcategoria"));
+                categoria.setNombre(respuesta.getString("nombre_categoria"));
+                piezas.setNombre(respuesta.getString("nombre"));
+                piezas.setColor(respuesta.getString("color"));
+                piezas.setPrecio(respuesta.getDouble("precio"));
+                piezas.setCategoria(categoria);
+                piezasLista.add(piezas);
+
+            }
+        }catch (SQLException e){
+            return piezasLista;
+        }
+        return piezasLista;
     }
 
     @Override
